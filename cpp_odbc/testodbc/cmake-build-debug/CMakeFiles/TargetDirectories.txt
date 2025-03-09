@@ -1,0 +1,3 @@
+/home/mor/NextcloudTUM/Documents/docker/centos/testodbc/cmake-build-debug/CMakeFiles/testodbc.dir
+/home/mor/NextcloudTUM/Documents/docker/centos/testodbc/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mor/NextcloudTUM/Documents/docker/centos/testodbc/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,8 @@
+# ninja log v6
+58	67	1739894189534873827	/home/mor/projects/testodbc/cmake-build-debug/CMakeFiles/testodbc.dir/CXXModules.json	e9a5bc1018a21f21
+717	861	1739895327615023397	testodbc	90287fbba06a32b
+1	717	1739895326898017022	CMakeFiles/testodbc.dir/main.cpp.o	120264c92661a115
+2	840	1739895689325167648	CMakeFiles/testodbc.dir/main.cpp.o	6c93f031fb76f8bb
+841	1012	1739895690164174809	testodbc	90287fbba06a32b
+4	642	1740394182088205673	CMakeFiles/testodbc.dir/main.cpp.o	6c93f031fb76f8bb
+642	705	1740394182726207578	testodbc	90287fbba06a32b
