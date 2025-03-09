@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/simpleServer.dir/link.d CMakeFiles/simpleServer.dir/simple_flight_sql_server.cpp.o -o simpleServer  -Wl,-rpath,/usr/local/lib /usr/local/lib/libarrow_flight_sql.so.1900.1.0 /usr/local/lib/libarrow_flight.so.1900.1.0 /usr/local/lib/libarrow.so.1900.1.0 -ldl -lrt

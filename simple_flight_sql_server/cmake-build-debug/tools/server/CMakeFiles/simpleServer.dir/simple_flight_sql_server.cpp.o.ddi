@@ -1,0 +1,9 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "tools/server/CMakeFiles/simpleServer.dir/simple_flight_sql_server.cpp.o"
+    }
+  ],
+  "version": 1
+}

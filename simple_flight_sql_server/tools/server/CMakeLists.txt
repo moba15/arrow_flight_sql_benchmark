@@ -1,0 +1,4 @@
+find_package(Arrow REQUIRED)
+find_package(ArrowFlightSql REQUIRED)
+add_executable(simpleServer simple_flight_sql_server.cpp simple_flight_sql_server.h)
+target_link_libraries(simpleServer  PRIVATE ArrowFlight::arrow_flight_shared PRIVATE ArrowFlightSql::arrow_flight_sql_shared)

@@ -1,0 +1,16 @@
+/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/var/lib/snapd/snap/clion/322/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=/home/mor/projects/lingo-db/llvm-project/build/bin/clang -DCMAKE_CXX_COMPILER=/home/mor/projects/lingo-db/llvm-project/build/bin/clang++ -G Ninja -S /home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server -B /home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug
+-- Arrow version: 19.0.1
+-- Found the Arrow shared library: /usr/local/lib/libarrow.so.1900.1.0
+-- Found the Arrow import library: ARROW_IMPORT_LIB-NOTFOUND
+-- Found the Arrow static library: 
+-- ArrowFlight version: 19.0.1
+-- Found the ArrowFlight shared library: /usr/local/lib/libarrow_flight.so.1900.1.0
+-- Found the ArrowFlight import library: ARROW_FLIGHT_IMPORT_LIB-NOTFOUND
+-- Found the ArrowFlight static library: 
+-- ArrowFlightSql version: 19.0.1
+-- Found the ArrowFlightSql shared library: /usr/local/lib/libarrow_flight_sql.so.1900.1.0
+-- Found the ArrowFlightSql import library: ARROW_FLIGHT_SQL_IMPORT_LIB-NOTFOUND
+-- Found the ArrowFlightSql static library: 
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug

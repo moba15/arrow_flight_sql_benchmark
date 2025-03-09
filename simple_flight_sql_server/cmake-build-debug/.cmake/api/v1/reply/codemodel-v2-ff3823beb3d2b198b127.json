@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "tools/server",
+					"jsonFile" : "directory-tools.server-Debug-2ce4b2488da213d4f822.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tools/server",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "arrow_flight_sql_simple",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "arrow_flight_sql_simple::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arrow_flight_sql_simple-Debug-076e97518501a3a62edb.json",
+					"name" : "arrow_flight_sql_simple",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "simpleServer::@b300b5a16b91526dd44e",
+					"jsonFile" : "target-simpleServer-Debug-f77b7cacc50bad180c09.json",
+					"name" : "simpleServer",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug",
+		"source" : "/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

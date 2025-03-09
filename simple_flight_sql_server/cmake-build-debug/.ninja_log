@@ -1,0 +1,22 @@
+# ninja log v6
+181	184	1741442077644957154	tools/server/CMakeFiles/simpleServer.dir/simple_flight_sql_server.cpp.o.modmap	a888635bd74a50ca
+181	184	1741442077644957154	/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/tools/server/CMakeFiles/simpleServer.dir/CXXModules.json	a888635bd74a50ca
+181	184	1741442077644957154	tools/server/CMakeFiles/simpleServer.dir/CXX.dd	a888635bd74a50ca
+2793	2947	1741442617954308646	tools/server/simpleServer	35ae3c5e88bfcb75
+4	181	1741442077464377054	tools/server/CMakeFiles/simpleServer.dir/simple_flight_sql_server.cpp.o.ddi	702933571820b156
+1	2793	1741442615162284904	tools/server/CMakeFiles/simpleServer.dir/simple_flight_sql_server.cpp.o	3aa4ccefdc878b78
+1	22	1741442652337268396	build.ninja	51527feed4c0aae3
+1	2646	1741442657225641802	tools/server/CMakeFiles/simpleServer.dir/simple_flight_sql_server.cpp.o	3aa4ccefdc878b78
+2646	2802	1741442659870664192	tools/server/simpleServer	35ae3c5e88bfcb75
+1	2459	1741442745064510574	tools/server/CMakeFiles/simpleServer.dir/simple_flight_sql_server.cpp.o	3aa4ccefdc878b78
+2459	2602	1741442747522540472	tools/server/simpleServer	35ae3c5e88bfcb75
+1	2219	1741442807202254347	tools/server/CMakeFiles/simpleServer.dir/simple_flight_sql_server.cpp.o	3aa4ccefdc878b78
+2219	2341	1741442809420280451	tools/server/simpleServer	35ae3c5e88bfcb75
+1	3147	1741442857315837180	tools/server/CMakeFiles/simpleServer.dir/simple_flight_sql_server.cpp.o	3aa4ccefdc878b78
+3147	3292	1741442860461873299	tools/server/simpleServer	35ae3c5e88bfcb75
+1	2578	1741442883970141524	tools/server/CMakeFiles/simpleServer.dir/simple_flight_sql_server.cpp.o	3aa4ccefdc878b78
+2578	2713	1741442886547170750	tools/server/simpleServer	35ae3c5e88bfcb75
+1	2790	1741442919757544428	tools/server/CMakeFiles/simpleServer.dir/simple_flight_sql_server.cpp.o	3aa4ccefdc878b78
+2790	2926	1741442922546575563	tools/server/simpleServer	35ae3c5e88bfcb75
+1	3045	1741442940688777190	tools/server/CMakeFiles/simpleServer.dir/simple_flight_sql_server.cpp.o	3aa4ccefdc878b78
+3045	3203	1741442943732810871	tools/server/simpleServer	35ae3c5e88bfcb75

@@ -1,0 +1,6 @@
+/home/mor/projects/arrow_flight_sql_simple/build/CMakeFiles/arrow_flight_sql_simple.dir
+/home/mor/projects/arrow_flight_sql_simple/build/CMakeFiles/edit_cache.dir
+/home/mor/projects/arrow_flight_sql_simple/build/CMakeFiles/rebuild_cache.dir
+/home/mor/projects/arrow_flight_sql_simple/build/tools/server/CMakeFiles/simpleServer.dir
+/home/mor/projects/arrow_flight_sql_simple/build/tools/server/CMakeFiles/edit_cache.dir
+/home/mor/projects/arrow_flight_sql_simple/build/tools/server/CMakeFiles/rebuild_cache.dir

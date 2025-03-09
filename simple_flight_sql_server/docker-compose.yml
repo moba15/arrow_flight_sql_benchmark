@@ -1,0 +1,17 @@
+services:
+  simple_server:
+    image: simple_server
+    build:
+      dockerfile: Dockerfile
+    container_name: simple_server
+    stdin_open: true
+    tty: true
+    privileged: true
+    networks:
+      - lingodb
+    ports:
+      - "8083:8083"
+networks:
+  lingodb:
+    external: true
+
