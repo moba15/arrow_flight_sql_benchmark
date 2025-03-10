@@ -4,16 +4,16 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
       The system is: Linux - 6.13.5-arch1-1 - x86_64
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
@@ -33,9 +33,9 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
@@ -55,14 +55,14 @@ events:
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Svo5Jb"
-      binary: "/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Svo5Jb"
+      source: "/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-WRnaSH"
+      binary: "/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-WRnaSH"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/mor/projects/lingo-db/llvm-project/build/bin/clang-scan-deps"
       CMAKE_C_FLAGS: ""
@@ -72,10 +72,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Svo5Jb'
+        Change Dir: '/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-WRnaSH'
         
-        Run Build Command(s): /var/lib/snapd/snap/clion/322/bin/ninja/linux/x64/ninja -v cmTC_f1eab
-        [1/2] /home/mor/projects/lingo-db/llvm-project/build/bin/clang   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o -c /var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /var/lib/snapd/snap/clion/326/bin/ninja/linux/x64/ninja -v cmTC_538a2
+        [1/2] /home/mor/projects/lingo-db/llvm-project/build/bin/clang   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o -c /var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c
         clang version 20.0.0git (https://github.com/lingo-db/llvm-project.git 2a1a90722c9b8f330d73b844f96d723909f6073f)
         Target: x86_64-unknown-linux-gnu
         Thread model: posix
@@ -88,7 +88,7 @@ events:
         Candidate multilib: 32;@m32
         Selected multilib: .;@m64
          (in-process)
-         "/home/mor/projects/lingo-db/llvm-project/build/bin/clang-20" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Svo5Jb -v -fcoverage-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Svo5Jb -resource-dir /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20 -dependency-file CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o -x c /var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c
+         "/home/mor/projects/lingo-db/llvm-project/build/bin/clang-20" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-WRnaSH -v -fcoverage-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-WRnaSH -resource-dir /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20 -dependency-file CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o -x c /var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c
         clang -cc1 version 20.0.0git based upon LLVM 20.0.0git default target x86_64-unknown-linux-gnu
         ignoring nonexistent directory "/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../x86_64-pc-linux-gnu/include"
         ignoring nonexistent directory "/include"
@@ -98,7 +98,7 @@ events:
          /usr/local/include
          /usr/include
         End of search list.
-        [2/2] : && /home/mor/projects/lingo-db/llvm-project/build/bin/clang  -v -Wl,-v CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o -o cmTC_f1eab   && :
+        [2/2] : && /home/mor/projects/lingo-db/llvm-project/build/bin/clang  -v -Wl,-v CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o -o cmTC_538a2   && :
         clang version 20.0.0git (https://github.com/lingo-db/llvm-project.git 2a1a90722c9b8f330d73b844f96d723909f6073f)
         Target: x86_64-unknown-linux-gnu
         Thread model: posix
@@ -110,15 +110,15 @@ events:
         Candidate multilib: .;@m64
         Candidate multilib: 32;@m32
         Selected multilib: .;@m64
-         "/usr/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f1eab /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/Scrt1.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1 -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crtn.o
+         "/usr/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_538a2 /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/Scrt1.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1 -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crtn.o
         GNU ld (GNU Binutils) 2.44
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
@@ -137,17 +137,17 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Svo5Jb']
+        ignore line: [Change Dir: '/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-WRnaSH']
         ignore line: []
-        ignore line: [Run Build Command(s): /var/lib/snapd/snap/clion/322/bin/ninja/linux/x64/ninja -v cmTC_f1eab]
-        ignore line: [[1/2] /home/mor/projects/lingo-db/llvm-project/build/bin/clang   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o -c /var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /var/lib/snapd/snap/clion/326/bin/ninja/linux/x64/ninja -v cmTC_538a2]
+        ignore line: [[1/2] /home/mor/projects/lingo-db/llvm-project/build/bin/clang   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o -c /var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c]
         ignore line: [clang version 20.0.0git (https://github.com/lingo-db/llvm-project.git 2a1a90722c9b8f330d73b844f96d723909f6073f)]
         ignore line: [Target: x86_64-unknown-linux-gnu]
         ignore line: [Thread model: posix]
@@ -163,7 +163,7 @@ events:
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
         ignore line: [ (in-process)]
-        ignore line: [ "/home/mor/projects/lingo-db/llvm-project/build/bin/clang-20" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Svo5Jb -v -fcoverage-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Svo5Jb -resource-dir /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20 -dependency-file CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o -x c /var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/home/mor/projects/lingo-db/llvm-project/build/bin/clang-20" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-WRnaSH -v -fcoverage-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-WRnaSH -resource-dir /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20 -dependency-file CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o -x c /var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 20.0.0git based upon LLVM 20.0.0git default target x86_64-unknown-linux-gnu]
         ignore line: [ignoring nonexistent directory "/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../x86_64-pc-linux-gnu/include"]
         ignore line: [ignoring nonexistent directory "/include"]
@@ -173,7 +173,7 @@ events:
         ignore line: [ /usr/local/include]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /home/mor/projects/lingo-db/llvm-project/build/bin/clang  -v -Wl -v CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o -o cmTC_f1eab   && :]
+        ignore line: [[2/2] : && /home/mor/projects/lingo-db/llvm-project/build/bin/clang  -v -Wl -v CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o -o cmTC_538a2   && :]
         ignore line: [clang version 20.0.0git (https://github.com/lingo-db/llvm-project.git 2a1a90722c9b8f330d73b844f96d723909f6073f)]
         ignore line: [Target: x86_64-unknown-linux-gnu]
         ignore line: [Thread model: posix]
@@ -188,7 +188,7 @@ events:
         ignore line: [@m32]
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
-        link line: [ "/usr/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f1eab /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/Scrt1.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1 -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crtn.o]
+        link line: [ "/usr/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_538a2 /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/Scrt1.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1 -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crtn.o]
           arg [/usr/bin/ld] ==> ignore
           arg [--hash-style=gnu] ==> ignore
           arg [--eh-frame-hdr] ==> ignore
@@ -198,7 +198,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_f1eab] ==> ignore
+          arg [cmTC_538a2] ==> ignore
           arg [/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/Scrt1.o] ==> obj [/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/Scrt1.o]
           arg [/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crti.o] ==> obj [/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crti.o]
           arg [/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o] ==> obj [/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o]
@@ -209,7 +209,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_f1eab.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_538a2.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--as-needed] ==> ignore
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -240,9 +240,9 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Running the C compiler's linker: "/usr/bin/ld" "-v"
@@ -250,14 +250,14 @@ events:
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cWIzoV"
-      binary: "/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cWIzoV"
+      source: "/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jTgUpD"
+      binary: "/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jTgUpD"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/mor/projects/lingo-db/llvm-project/build/bin/clang-scan-deps"
       CMAKE_CXX_FLAGS: ""
@@ -268,10 +268,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cWIzoV'
+        Change Dir: '/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jTgUpD'
         
-        Run Build Command(s): /var/lib/snapd/snap/clion/322/bin/ninja/linux/x64/ninja -v cmTC_f0329
-        [1/2] /home/mor/projects/lingo-db/llvm-project/build/bin/clang++   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o -c /var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /var/lib/snapd/snap/clion/326/bin/ninja/linux/x64/ninja -v cmTC_4d0ec
+        [1/2] /home/mor/projects/lingo-db/llvm-project/build/bin/clang++   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o -c /var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
         clang version 20.0.0git (https://github.com/lingo-db/llvm-project.git 2a1a90722c9b8f330d73b844f96d723909f6073f)
         Target: x86_64-unknown-linux-gnu
         Thread model: posix
@@ -284,7 +284,7 @@ events:
         Candidate multilib: 32;@m32
         Selected multilib: .;@m64
          (in-process)
-         "/home/mor/projects/lingo-db/llvm-project/build/bin/clang-20" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cWIzoV -v -fcoverage-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cWIzoV -resource-dir /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20 -dependency-file CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1 -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/x86_64-pc-linux-gnu -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/backward -internal-isystem /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o -x c++ /var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+         "/home/mor/projects/lingo-db/llvm-project/build/bin/clang-20" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jTgUpD -v -fcoverage-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jTgUpD -resource-dir /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20 -dependency-file CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1 -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/x86_64-pc-linux-gnu -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/backward -internal-isystem /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o -x c++ /var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 20.0.0git based upon LLVM 20.0.0git default target x86_64-unknown-linux-gnu
         ignoring nonexistent directory "/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../x86_64-pc-linux-gnu/include"
         ignoring nonexistent directory "/include"
@@ -297,7 +297,7 @@ events:
          /usr/local/include
          /usr/include
         End of search list.
-        [2/2] : && /home/mor/projects/lingo-db/llvm-project/build/bin/clang++  -v -Wl,-v CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f0329   && :
+        [2/2] : && /home/mor/projects/lingo-db/llvm-project/build/bin/clang++  -v -Wl,-v CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_4d0ec   && :
         clang version 20.0.0git (https://github.com/lingo-db/llvm-project.git 2a1a90722c9b8f330d73b844f96d723909f6073f)
         Target: x86_64-unknown-linux-gnu
         Thread model: posix
@@ -309,15 +309,15 @@ events:
         Candidate multilib: .;@m64
         Candidate multilib: 32;@m32
         Selected multilib: .;@m64
-         "/usr/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f0329 /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/Scrt1.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1 -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crtn.o
+         "/usr/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_4d0ec /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/Scrt1.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1 -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crtn.o
         GNU ld (GNU Binutils) 2.44
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
@@ -342,17 +342,17 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cWIzoV']
+        ignore line: [Change Dir: '/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jTgUpD']
         ignore line: []
-        ignore line: [Run Build Command(s): /var/lib/snapd/snap/clion/322/bin/ninja/linux/x64/ninja -v cmTC_f0329]
-        ignore line: [[1/2] /home/mor/projects/lingo-db/llvm-project/build/bin/clang++   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o -c /var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /var/lib/snapd/snap/clion/326/bin/ninja/linux/x64/ninja -v cmTC_4d0ec]
+        ignore line: [[1/2] /home/mor/projects/lingo-db/llvm-project/build/bin/clang++   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o -c /var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang version 20.0.0git (https://github.com/lingo-db/llvm-project.git 2a1a90722c9b8f330d73b844f96d723909f6073f)]
         ignore line: [Target: x86_64-unknown-linux-gnu]
         ignore line: [Thread model: posix]
@@ -368,7 +368,7 @@ events:
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
         ignore line: [ (in-process)]
-        ignore line: [ "/home/mor/projects/lingo-db/llvm-project/build/bin/clang-20" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cWIzoV -v -fcoverage-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cWIzoV -resource-dir /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20 -dependency-file CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1 -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/x86_64-pc-linux-gnu -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/backward -internal-isystem /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o -x c++ /var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/home/mor/projects/lingo-db/llvm-project/build/bin/clang-20" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jTgUpD -v -fcoverage-compilation-dir=/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jTgUpD -resource-dir /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20 -dependency-file CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1 -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/x86_64-pc-linux-gnu -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/backward -internal-isystem /home/mor/projects/lingo-db/llvm-project/build/lib/clang/20/include -internal-isystem /usr/local/include -internal-isystem /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o -x c++ /var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 20.0.0git based upon LLVM 20.0.0git default target x86_64-unknown-linux-gnu]
         ignore line: [ignoring nonexistent directory "/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../x86_64-pc-linux-gnu/include"]
         ignore line: [ignoring nonexistent directory "/include"]
@@ -381,7 +381,7 @@ events:
         ignore line: [ /usr/local/include]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /home/mor/projects/lingo-db/llvm-project/build/bin/clang++  -v -Wl -v CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f0329   && :]
+        ignore line: [[2/2] : && /home/mor/projects/lingo-db/llvm-project/build/bin/clang++  -v -Wl -v CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_4d0ec   && :]
         ignore line: [clang version 20.0.0git (https://github.com/lingo-db/llvm-project.git 2a1a90722c9b8f330d73b844f96d723909f6073f)]
         ignore line: [Target: x86_64-unknown-linux-gnu]
         ignore line: [Thread model: posix]
@@ -396,7 +396,7 @@ events:
         ignore line: [@m32]
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
-        link line: [ "/usr/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f0329 /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/Scrt1.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1 -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crtn.o]
+        link line: [ "/usr/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_4d0ec /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/Scrt1.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1 -L/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o /usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crtn.o]
           arg [/usr/bin/ld] ==> ignore
           arg [--hash-style=gnu] ==> ignore
           arg [--eh-frame-hdr] ==> ignore
@@ -406,7 +406,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_f0329] ==> ignore
+          arg [cmTC_4d0ec] ==> ignore
           arg [/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/Scrt1.o] ==> obj [/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/Scrt1.o]
           arg [/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crti.o] ==> obj [/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib64/crti.o]
           arg [/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o] ==> obj [/usr/lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o]
@@ -417,7 +417,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_f0329.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_4d0ec.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -446,9 +446,9 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Running the CXX compiler's linker: "/usr/bin/ld" "-v"

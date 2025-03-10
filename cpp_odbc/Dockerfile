@@ -24,7 +24,7 @@ COPY testodbc testodbc/
 RUN cd testodbc && mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release ..  && cmake --build . -j 6
 COPY duckdb_odbc-linux-amd64.zip duckdb_odbc.zip
 RUN mkdir duckdb_odbc && unzip duckdb_odbc.zip -d duckdb_odbc
-COPY test.db duckdb_odbc/duckdb_odbc-linux-amd64/test.db
+VOLUME duckdb_odbc/duckdb_odbc-linux-amd64/test.db
 RUN cd duckdb_odbc/duckdb_odbc-linux-amd64/ && ./unixodbc_setup.sh -s -db test.db
 ENV DLS ArrowLingodDb
 ENV TYPE 0

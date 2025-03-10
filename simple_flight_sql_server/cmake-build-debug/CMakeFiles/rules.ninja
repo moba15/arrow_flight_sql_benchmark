@@ -61,7 +61,7 @@ rule CXX_EXECUTABLE_LINKER__simpleServer_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server -B/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug
+  command = /var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server -B/home/mor/projects/arrow_flight_sql_benchmarks/simple_flight_sql_server/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 
@@ -70,7 +70,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = /var/lib/snapd/snap/clion/322/bin/ninja/linux/x64/ninja $FILE_ARG -t clean $TARGETS
+  command = /var/lib/snapd/snap/clion/326/bin/ninja/linux/x64/ninja $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -78,6 +78,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = /var/lib/snapd/snap/clion/322/bin/ninja/linux/x64/ninja -t targets
+  command = /var/lib/snapd/snap/clion/326/bin/ninja/linux/x64/ninja -t targets
   description = All primary targets available:
 

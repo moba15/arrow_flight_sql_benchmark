@@ -155,6 +155,7 @@ services:
       context: ./java_jdbc
       dockerfile: Dockerfile
     container_name: jdbc_timing_client_sqlflite
+
     privileged: true
     stdin_open: true
     tty: true
@@ -162,6 +163,19 @@ services:
       - lingodb
     environment:
       JDBC_URL: jdbc:arrow-flight-sql://sqlfliteDuckdb:31337?useEncryption=false&user=sqlflite_username&password=sqlflite_password&disableCertificateVerification=true
+  jdbc_timing_client_simple_server:
+    image: jdbc_timing_client
+    build:
+      context: ./java_jdbc
+      dockerfile: Dockerfile
+    container_name: jdbc_timing_client_simple_server
+    privileged: true
+    stdin_open: true
+    tty: true
+    networks:
+      - lingodb
+    environment:
+      JDBC_URL: jdbc:arrow-flight-sql://simpleSQLServer:8083?useEncryption=false
 
   
   #adbc

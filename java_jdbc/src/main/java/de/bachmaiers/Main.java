@@ -2,6 +2,7 @@ package de.bachmaiers;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.Properties;
 
 enum QueryType {
     query1, query2, query3, query4, query5, query6, query7, query8,query9,query10;
@@ -46,13 +47,12 @@ public class Main {
         Class.forName("org.apache.arrow.driver.jdbc.ArrowFlightJdbcDriver");
         String url = System.getenv("JDBC_URL");
 
-
-        System.out.println("Connecting2: " + url);
+        System.out.println("Connecting to " + url);
 
         Connection conn = DriverManager.getConnection(url);
         for (int i = 1_000; i <= 1_000; i *= 10) {
             for (QueryType queryType : QueryType.values()) {
-                Pair p = runTime(queryType.toString(), queryType.toIteration(), 0, 1_000_000_000, conn);
+                Pair p = runTime(queryType.toQuery(), queryType.toIteration(), 0, 1_000_000_000, conn);
                 System.out.println("Iteration " + queryType.toIteration() + " query: " + queryType.toString() + " : " + p.time + "  Size: "  + p.size);
             }
 

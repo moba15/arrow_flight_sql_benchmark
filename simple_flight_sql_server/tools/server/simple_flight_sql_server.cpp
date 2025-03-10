@@ -76,7 +76,9 @@ arrow::Status SimpleFlightSQLServer::ClosePreparedStatement(const arrow::flight:
 arrow::Result<std::shared_ptr<arrow::RecordBatch>> SimpleFlightSQLServer::getTable(std::string handle)
 {
     std::cout << handle << std::endl;
-    if (handle == "query1")
+    if (!two_rows)
+    {
+        if (handle == "query1")
     {
         arrow::Int64Builder int64Builder;
         std::array<int64_t, 1> values{};
@@ -114,7 +116,6 @@ arrow::Result<std::shared_ptr<arrow::RecordBatch>> SimpleFlightSQLServer::getTab
 
         // Every field needs its name and data type.
         field_day = arrow::field("Day", arrow::int64());
-
         // The schema can be built from a vector of fields, and we do so here.
         schema = arrow::schema({field_day});
 
@@ -135,13 +136,10 @@ arrow::Result<std::shared_ptr<arrow::RecordBatch>> SimpleFlightSQLServer::getTab
         ARROW_ASSIGN_OR_RAISE(days, int64builder.Finish());
         std::shared_ptr<arrow::Field> field_day;
         std::shared_ptr<arrow::Schema> schema;
-
         // Every field needs its name and data type.
         field_day = arrow::field("Day", arrow::int64());
-
         // The schema can be built from a vector of fields, and we do so here.
         schema = arrow::schema({field_day});
-
         std::shared_ptr<arrow::RecordBatch> rbatch;
         // The RecordBatch needs the schema, length for columns, which all must match,
         // and the actual data itself.
@@ -159,7 +157,6 @@ arrow::Result<std::shared_ptr<arrow::RecordBatch>> SimpleFlightSQLServer::getTab
         ARROW_ASSIGN_OR_RAISE(days, int64builder.Finish());
         std::shared_ptr<arrow::Field> field_day;
         std::shared_ptr<arrow::Schema> schema;
-
         // Every field needs its name and data type.
         field_day = arrow::field("Day", arrow::int64());
 
@@ -181,10 +178,6 @@ arrow::Result<std::shared_ptr<arrow::RecordBatch>> SimpleFlightSQLServer::getTab
         ARROW_RETURN_NOT_OK(int64builder.AppendValues(days_raw.begin(), 10000));
         std::shared_ptr<arrow::Array> days;
         ARROW_ASSIGN_OR_RAISE(days, int64builder.Finish());
-
-
-
-
         std::shared_ptr<arrow::Field> field_day;
         std::shared_ptr<arrow::Schema> schema;
 
@@ -209,10 +202,6 @@ arrow::Result<std::shared_ptr<arrow::RecordBatch>> SimpleFlightSQLServer::getTab
         ARROW_RETURN_NOT_OK(int64builder.AppendValues(days_raw.begin(), 100000));
         std::shared_ptr<arrow::Array> days;
         ARROW_ASSIGN_OR_RAISE(days, int64builder.Finish());
-
-
-
-
         std::shared_ptr<arrow::Field> field_day;
         std::shared_ptr<arrow::Schema> schema;
 
@@ -237,27 +226,239 @@ arrow::Result<std::shared_ptr<arrow::RecordBatch>> SimpleFlightSQLServer::getTab
         ARROW_RETURN_NOT_OK(int64builder.AppendValues(days_raw.begin(), 1000000));
         std::shared_ptr<arrow::Array> days;
         ARROW_ASSIGN_OR_RAISE(days, int64builder.Finish());
-
-
-
-
         std::shared_ptr<arrow::Field> field_day;
         std::shared_ptr<arrow::Schema> schema;
-
         // Every field needs its name and data type.
         field_day = arrow::field("Day", arrow::int64());
-
         // The schema can be built from a vector of fields, and we do so here.
         schema = arrow::schema({field_day});
-
         std::shared_ptr<arrow::RecordBatch> rbatch;
         // The RecordBatch needs the schema, length for columns, which all must match,
         // and the actual data itself.
         rbatch = arrow::RecordBatch::Make(schema, days->length(), {days});
         return rbatch;
     }
+    }
+    if (two_rows)
+    {
+        if (handle == "query1")
+        {
+            constexpr size_t size = 5;
+            arrow::Int64Builder int64Builder;
+            std::array<int64_t, size> values{};
+            createArray<size>(values);
+            // AppendValues, as called, puts 5 values from days_raw into our Builder object.
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> days;
+            ARROW_ASSIGN_OR_RAISE(days, int64Builder.Finish());
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> months;
+            ARROW_ASSIGN_OR_RAISE(months, int64Builder.Finish());
+            std::shared_ptr<arrow::Field> field_day;
+            std::shared_ptr<arrow::Field> field_month;
+            std::shared_ptr<arrow::Schema> schema;
+
+            // Every field needs its name and data type.
+            field_day = arrow::field("Day", arrow::int64());
+            field_month = arrow::field("Month", arrow::int64());
+
+            // The schema can be built from a vector of fields, and we do so here.
+            schema = arrow::schema({field_day, field_month});
+
+            std::shared_ptr<arrow::RecordBatch> rbatch;
+            // The RecordBatch needs the schema, length for columns, which all must match,
+            // and the actual data itself.
+            rbatch = arrow::RecordBatch::Make(schema, days->length(), {days, months});
+            return rbatch;
+        }
+        if (handle == "query2")
+        {
+            constexpr size_t size = 5*10;
+            arrow::Int64Builder int64Builder;
+            std::array<int64_t, size> values{};
+            createArray<size>(values);
+            // AppendValues, as called, puts 5 values from days_raw into our Builder object.
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> days;
+            ARROW_ASSIGN_OR_RAISE(days, int64Builder.Finish());
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> months;
+            ARROW_ASSIGN_OR_RAISE(months, int64Builder.Finish());
+            std::shared_ptr<arrow::Field> field_day;
+            std::shared_ptr<arrow::Field> field_month;
+            std::shared_ptr<arrow::Schema> schema;
+
+            // Every field needs its name and data type.
+            field_day = arrow::field("Day", arrow::int64());
+            field_month = arrow::field("Month", arrow::int64());
+
+            // The schema can be built from a vector of fields, and we do so here.
+            schema = arrow::schema({field_day, field_month});
+
+            std::shared_ptr<arrow::RecordBatch> rbatch;
+            // The RecordBatch needs the schema, length for columns, which all must match,
+            // and the actual data itself.
+            rbatch = arrow::RecordBatch::Make(schema, days->length(), {days, months});
+            return rbatch;
+        }
+        if (handle == "query3")
+        {
+            constexpr size_t size = 5*10*10;
+            arrow::Int64Builder int64Builder;
+            std::array<int64_t, size> values{};
+            createArray<size>(values);
+            // AppendValues, as called, puts 5 values from days_raw into our Builder object.
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> days;
+            ARROW_ASSIGN_OR_RAISE(days, int64Builder.Finish());
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> months;
+            ARROW_ASSIGN_OR_RAISE(months, int64Builder.Finish());
+            std::shared_ptr<arrow::Field> field_day;
+            std::shared_ptr<arrow::Field> field_month;
+            std::shared_ptr<arrow::Schema> schema;
+
+            // Every field needs its name and data type.
+            field_day = arrow::field("Day", arrow::int64());
+            field_month = arrow::field("Month", arrow::int64());
+
+            // The schema can be built from a vector of fields, and we do so here.
+            schema = arrow::schema({field_day, field_month});
+
+            std::shared_ptr<arrow::RecordBatch> rbatch;
+            // The RecordBatch needs the schema, length for columns, which all must match,
+            // and the actual data itself.
+            rbatch = arrow::RecordBatch::Make(schema, days->length(), {days, months});
+            return rbatch;
+        }
+        if (handle == "query4")
+        {
+            constexpr size_t size = 5*10*10*10;
+            arrow::Int64Builder int64Builder;
+            std::array<int64_t, size> values{};
+            createArray<size>(values);
+            // AppendValues, as called, puts 5 values from days_raw into our Builder object.
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> days;
+            ARROW_ASSIGN_OR_RAISE(days, int64Builder.Finish());
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> months;
+            ARROW_ASSIGN_OR_RAISE(months, int64Builder.Finish());
+            std::shared_ptr<arrow::Field> field_day;
+            std::shared_ptr<arrow::Field> field_month;
+            std::shared_ptr<arrow::Schema> schema;
+
+            // Every field needs its name and data type.
+            field_day = arrow::field("Day", arrow::int64());
+            field_month = arrow::field("Month", arrow::int64());
+
+            // The schema can be built from a vector of fields, and we do so here.
+            schema = arrow::schema({field_day, field_month});
+
+            std::shared_ptr<arrow::RecordBatch> rbatch;
+            // The RecordBatch needs the schema, length for columns, which all must match,
+            // and the actual data itself.
+            rbatch = arrow::RecordBatch::Make(schema, days->length(), {days, months});
+            return rbatch;
+        }
+        if (handle == "query5")
+        {
+            constexpr size_t size = 5*10*10*10*10;
+            arrow::Int64Builder int64Builder;
+            std::array<int64_t, size> values{};
+            createArray<size>(values);
+            // AppendValues, as called, puts 5 values from days_raw into our Builder object.
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> days;
+            ARROW_ASSIGN_OR_RAISE(days, int64Builder.Finish());
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> months;
+            ARROW_ASSIGN_OR_RAISE(months, int64Builder.Finish());
+            std::shared_ptr<arrow::Field> field_day;
+            std::shared_ptr<arrow::Field> field_month;
+            std::shared_ptr<arrow::Schema> schema;
+
+            // Every field needs its name and data type.
+            field_day = arrow::field("Day", arrow::int64());
+            field_month = arrow::field("Month", arrow::int64());
+
+            // The schema can be built from a vector of fields, and we do so here.
+            schema = arrow::schema({field_day, field_month});
+
+            std::shared_ptr<arrow::RecordBatch> rbatch;
+            // The RecordBatch needs the schema, length for columns, which all must match,
+            // and the actual data itself.
+            rbatch = arrow::RecordBatch::Make(schema, days->length(), {days, months});
+            return rbatch;
+        }
+        if (handle == "query6")
+        {
+            constexpr size_t size =  5*10*10*10*10;
+            arrow::Int64Builder int64Builder;
+            std::array<int64_t, size> values{};
+            createArray<size>(values);
+            // AppendValues, as called, puts 5 values from days_raw into our Builder object.
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> array1;
+            ARROW_ASSIGN_OR_RAISE(array1, int64Builder.Finish());
+
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> array2;
+            ARROW_ASSIGN_OR_RAISE(array2, int64Builder.Finish());
+
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> array3;
+            ARROW_ASSIGN_OR_RAISE(array3, int64Builder.Finish());
+
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> array4;
+            ARROW_ASSIGN_OR_RAISE(array4, int64Builder.Finish());
+
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> array5;
+            ARROW_ASSIGN_OR_RAISE(array5, int64Builder.Finish());
+
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> array6;
+            ARROW_ASSIGN_OR_RAISE(array6, int64Builder.Finish());
+
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> array7;
+            ARROW_ASSIGN_OR_RAISE(array7, int64Builder.Finish());
+
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> array8;
+            ARROW_ASSIGN_OR_RAISE(array8, int64Builder.Finish());
+
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> array9;
+            ARROW_ASSIGN_OR_RAISE(array9, int64Builder.Finish());
+
+            ARROW_RETURN_NOT_OK(int64Builder.AppendValues(values.begin(), size));
+            std::shared_ptr<arrow::Array> array10;
+            ARROW_ASSIGN_OR_RAISE(array10, int64Builder.Finish());
 
 
+
+            std::shared_ptr<arrow::Field> field;
+            std::shared_ptr<arrow::Schema> schema;
+
+            // Every field needs its name and data type.
+            field = arrow::field("Day", arrow::int64());
+
+
+            // The schema can be built from a vector of fields, and we do so here.
+            schema = arrow::schema({field, field,field,field,field,field,field,field,field,field});
+
+            std::shared_ptr<arrow::RecordBatch> rbatch;
+            // The RecordBatch needs the schema, length for columns, which all must match,
+            // and the actual data itself.
+            rbatch = arrow::RecordBatch::Make(schema, array1->length(), {array1, array2, array3, array4, array5, array6, array7, array8, array9,array10});
+            return rbatch;
+        }
+
+
+    }
     //String
 
     if (handle == "query1S")

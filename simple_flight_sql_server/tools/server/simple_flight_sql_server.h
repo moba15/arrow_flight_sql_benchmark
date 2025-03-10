@@ -7,6 +7,7 @@
 #include <random>
 
 class SimpleFlightSQLServer : public arrow::flight::sql::FlightSqlServerBase {
+
 public:
     arrow::Result<std::unique_ptr<arrow::flight::FlightInfo>> GetFlightInfoPreparedStatement(const arrow::flight::ServerCallContext& context, const arrow::flight::sql::PreparedStatementQuery& command, const arrow::flight::FlightDescriptor& descriptor) override;
     arrow::Result<arrow::flight::sql::ActionCreatePreparedStatementResult> CreatePreparedStatement(const arrow::flight::ServerCallContext& context, const arrow::flight::sql::ActionCreatePreparedStatementRequest& request) override;
@@ -14,6 +15,8 @@ public:
     arrow::Status ClosePreparedStatement(const arrow::flight::ServerCallContext& context, const arrow::flight::sql::ActionClosePreparedStatementRequest& request) override;
 
 private:
+    static constexpr  bool two_rows = false;
+
     arrow::Result<std::shared_ptr<arrow::RecordBatch>> getTable(std::string handle);
     template<size_t N>
     constexpr  void createArray( std::array<int8_t, N>& a)

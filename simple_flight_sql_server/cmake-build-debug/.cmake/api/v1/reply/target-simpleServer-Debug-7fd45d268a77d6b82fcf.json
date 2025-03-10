@@ -22,7 +22,7 @@
 			"tools/server/CMakeLists.txt",
 			"/usr/local/lib/cmake/ArrowFlight/ArrowFlightTargets.cmake",
 			"/usr/local/lib/cmake/ArrowFlight/ArrowFlightConfig.cmake",
-			"/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+			"/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
 			"/usr/local/lib/cmake/ArrowFlightSql/ArrowFlightSqlConfig.cmake",
 			"/usr/local/lib/cmake/Arrow/ArrowTargets.cmake",
 			"/usr/local/lib/cmake/Arrow/ArrowConfig.cmake"
