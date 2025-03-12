@@ -1,4 +1,4 @@
-# Install script for directory: /home/mor/NextcloudTUM/Documents/docker/centos/testodbc
+# Install script for directory: /home/mor/projects/arrow_flight_sql_benchmarks/cpp_odbc/testodbc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -57,6 +57,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/home/mor/NextcloudTUM/Documents/docker/centos/testodbc/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/mor/projects/arrow_flight_sql_benchmarks/cpp_odbc/testodbc/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

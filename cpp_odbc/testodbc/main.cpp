@@ -1,8 +1,12 @@
 #include <array>
 #include <chrono>
 #include <iostream>
-#include <sql.h>
-#include <sqlext.h>
+#include <iostream>
+#include <odbc/Connection.h>
+#include <odbc/Environment.h>
+#include <odbc/Exception.h>
+#include <odbc/PreparedStatement.h>
+#include <odbc/ResultSet.h>
 using std::chrono::high_resolution_clock;
 using std::chrono::duration_cast;
 using std::chrono::duration;
@@ -40,6 +44,10 @@ std::string toSqlString(SQLQuery query, std::string type)
             case SQLQuery::query3 : return  "query3";
             case SQLQuery::query4 : return "query4";
             case SQLQuery::query5 : return "query5";
+            case SQLQuery::query6 : return "query6";
+            case SQLQuery::query7 : return "query7";
+            case SQLQuery::query8 : return "query8";
+
         
             };
 
@@ -69,9 +77,44 @@ int toIteration(SQLQuery query)
 
 
 
-std::pair<int, std::pair<size_t, duration<double, std::milli>>> execute(std::string sql, SQLHSTMT& hStmt,SQLHDBC hDbc, size_t iteration);
+std::pair<int, std::pair<size_t, duration<double, std::milli>>> execute(odbc::ConnectionRef& conn, std::string sql, size_t iteration);
 int main(int argc, char* argv[]) {
-    SQLHENV hEnv;
+    try
+    {
+        if (argc < 3)
+        {
+            std::cerr << "Usage: " << argv[0] << " <connectionStr> <type>" << std::endl;
+            return 1;
+        }
+        std::string type = std::string(argv[2]);
+        if(type != "0" && type != "1") {
+            std::cerr << "type must be 0 or 1" << std::endl;
+            return 1;
+        }
+        odbc::EnvironmentRef env = odbc::Environment::create();
+
+        odbc::ConnectionRef conn = env->createConnection();
+        conn->connect(argv[1]);
+        std::array<SQLQuery, 8> queries{SQLQuery::query1, SQLQuery::query2, SQLQuery::query3, SQLQuery::query4, SQLQuery::query5, SQLQuery::query6, SQLQuery::query7, SQLQuery::query8};
+        for (auto query : queries)
+        {
+            auto t1 = high_resolution_clock::now();
+            auto suc = execute(conn, toSqlString(query, type), toIteration(query));
+            auto t2 = high_resolution_clock::now();
+            if (suc.first != 0)
+            {
+                std::cerr << "Failed to execute query." << std::endl;
+                conn->disconnect();
+                return 1;
+            };
+            std::cout << "Executed: " << static_cast<int>(query) << " " << toIteration(query) << " times with complete time: " << suc.second.second.count() <<  " size: "  << suc.second.first<< std::endl;
+        }
+    }
+    catch (const odbc::Exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+    /*SQLHENV hEnv;
     SQLHDBC hDbc;
     SQLHSTMT hStmt;
     SQLRETURN ret;
@@ -138,7 +181,7 @@ int main(int argc, char* argv[]) {
             SQLFreeHandle(SQL_HANDLE_ENV, hEnv);
 
     } else if(type == "1") {
-        std::array<SQLQuery, 8> queries{SQLQuery::query1, SQLQuery::query2, SQLQuery::query3, SQLQuery::query4, SQLQuery::query5, /*SQLQuery::query6, SQLQuery::query7, SQLQuery::query8*/};
+        std::array<SQLQuery, 8> queries{SQLQuery::query1, SQLQuery::query2, SQLQuery::query3, SQLQuery::query4, SQLQuery::query5};
         for (auto query : queries)
             {
 
@@ -156,7 +199,7 @@ int main(int argc, char* argv[]) {
             }
             SQLFreeHandle(SQL_HANDLE_DBC, hDbc);
             SQLFreeHandle(SQL_HANDLE_ENV, hEnv);
-    }
+    } */
     
     
 
@@ -167,9 +210,36 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
-std::pair<int, std::pair<size_t, duration<double, std::milli>>> execute(std::string sqlString, SQLHSTMT& hStmt, SQLHDBC hDbc, size_t iteration)
+
+std::pair<int, std::pair<size_t, duration<double, std::milli>>> execute(odbc::ConnectionRef& conn, std::string sqlString, size_t iteration)
 {
+
     duration<double, std::milli> durationComplete{0};
+    size_t size = 0;
+
+    for (size_t i = 0; i < iteration; i++)
+    {
+
+        size = 0;
+        auto t1 = high_resolution_clock::now();
+        odbc::PreparedStatementRef psSelect =
+            conn->prepareStatement(sqlString.c_str());
+        odbc::ResultSetRef rs = psSelect->executeQuery();
+        while (rs->next())
+        {
+            size++;
+        }
+        rs->close();
+        psSelect.reset();
+        auto t2 = high_resolution_clock::now();
+        duration<double, std::milli> ms_double = t2 - t1;
+        durationComplete+=(ms_double);
+
+
+
+    }
+
+  /*  duration<double, std::milli> durationComplete{0};
     size_t size = 0;
 
     for (auto i = 0; i < iteration; i++)
@@ -211,11 +281,12 @@ std::pair<int, std::pair<size_t, duration<double, std::milli>>> execute(std::str
         }
         SQLFreeHandle(SQL_HANDLE_STMT, hStmt);
         auto t2 = high_resolution_clock::now();
-        /* Getting number of milliseconds as a double. */
+
 
         duration<double, std::milli> ms_double = t2 - t1;
         durationComplete+=(ms_double);
     }
+    return {0, {size, durationComplete}};*/
     return {0, {size, durationComplete}};
 
 

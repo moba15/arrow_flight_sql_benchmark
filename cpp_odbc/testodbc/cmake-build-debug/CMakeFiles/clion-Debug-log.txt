@@ -1,25 +1,4 @@
-/var/lib/snapd/snap/clion/322/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/var/lib/snapd/snap/clion/322/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=/home/mor/projects/lingo-db/llvm-project/build/bin/clang -DCMAKE_CXX_COMPILER=/home/mor/projects/lingo-db/llvm-project/build/bin/clang++ -G Ninja -S /home/mor/NextcloudTUM/Documents/docker/centos/testodbc -B /home/mor/NextcloudTUM/Documents/docker/centos/testodbc/cmake-build-debug
-CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
-  Compatibility with CMake < 3.5 will be removed from a future version of
-  CMake.
-
-  Update the VERSION argument <min> value or use a ...<max> suffix to tell
-  CMake that the project does not need compatibility with older versions.
-
-
--- The C compiler identification is Clang 20.0.0
--- The CXX compiler identification is Clang 20.0.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /home/mor/projects/lingo-db/llvm-project/build/bin/clang - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /home/mor/projects/lingo-db/llvm-project/build/bin/clang++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Found ODBC: /usr/lib/libodbc.so
--- Configuring done (1.3s)
+/var/lib/snapd/snap/clion/326/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/var/lib/snapd/snap/clion/326/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=/home/mor/projects/lingo-db/llvm-project/build/bin/clang -DCMAKE_CXX_COMPILER=/home/mor/projects/lingo-db/llvm-project/build/bin/clang++ -G Ninja -S /home/mor/projects/arrow_flight_sql_benchmarks/cpp_odbc/testodbc -B /home/mor/projects/arrow_flight_sql_benchmarks/cpp_odbc/testodbc/cmake-build-debug
+-- Configuring done (0.0s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/mor/NextcloudTUM/Documents/docker/centos/testodbc/cmake-build-debug
+-- Build files have been written to: /home/mor/projects/arrow_flight_sql_benchmarks/cpp_odbc/testodbc/cmake-build-debug

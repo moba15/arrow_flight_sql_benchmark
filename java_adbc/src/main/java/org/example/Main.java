@@ -65,9 +65,7 @@ public class Main {
 
         for (int i = 1_000; i <= 1_000; i *= 10) {
             for (QueryType queryType : QueryType.values()) {
-                Pair p = runTime(queryType.toString(), 1, 0, 1_000_000_000, adbcConnection);
-
-
+                Pair p = runTime(queryType.toString(), queryType.toIteration(), 0, 1_000_000_000, adbcConnection);
                 System.out.println("Iteration " + queryType.toIteration() + " query: " + queryType.toString() + " : " + p.time + "  Size: " + p.size);
          
             }

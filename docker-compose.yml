@@ -92,6 +92,51 @@ services:
     environment:
       DLS: "ArrowSqflite"
       TYPE: "0"
+  odbc_simple_server:
+    image: cpp_odbc_client
+    build:
+      context: ./cpp_odbc
+      dockerfile: Dockerfile
+    container_name: odbc_simple_server
+    privileged: true
+    stdin_open: true
+    tty: true
+    networks:
+      - lingodb
+    environment:
+      DLS: DRIVER=ArrowDriver;HOST=simpleSQLServer;PORT=8083;useEncryption=false
+      TYPE: "1"
+  odbc_sqlflite_duckdb:
+    image: cpp_odbc_client
+    build:
+      context: ./cpp_odbc
+      dockerfile: Dockerfile
+    container_name: odbc_sqlflite_duckdb
+    privileged: true
+    stdin_open: true
+    tty: true
+    networks:
+      - lingodb
+    environment:
+      DLS: DRIVER=ArrowDriver;HOST=sqlfliteDuckdb;PORT=31337;useEncryption=false;UID=sqlflite_username;PWD=sqlflite_password
+      TYPE: "0"
+  odbc_duckdb:
+    image: cpp_odbc_client
+    build:
+      context: ./cpp_odbc
+      dockerfile: Dockerfile
+    container_name: odbc_duckdb
+    privileged: true
+    stdin_open: true
+    tty: true
+    networks:
+      - lingodb
+    volumes: 
+      - /home/mor/tpch:/database
+    environment:
+      DLS: DRIVER={DuckDB Driver};DATABASE=/database/tpch_sf20.duckdb
+      TYPE: "0"
+
   odbc_sqllite_client:
     image: cpp_odbc_client
     build:

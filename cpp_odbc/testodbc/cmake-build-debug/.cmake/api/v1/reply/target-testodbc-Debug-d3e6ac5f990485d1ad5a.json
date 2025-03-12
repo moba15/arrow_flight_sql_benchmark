@@ -10,7 +10,8 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"target_link_libraries"
 		],
 		"files" : 
 		[
@@ -24,7 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 19,
+				"line" : 21,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 22,
 				"parent" : 0
 			}
 		]
@@ -35,7 +42,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++11 -fcolor-diagnostics"
+					"fragment" : "-g -std=gnu++17 -fcolor-diagnostics"
 				}
 			],
 			"language" : "CXX",
@@ -45,7 +52,7 @@
 				[
 					1
 				],
-				"standard" : "11"
+				"standard" : "17"
 			},
 			"sourceIndexes" : 
 			[
@@ -63,11 +70,12 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-rdynamic",
+				"fragment" : "-Wl,-rpath,/usr/local/lib",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-lodbc",
+				"backtrace" : 2,
+				"fragment" : "-lodbccpp",
 				"role" : "libraries"
 			}
 		],
