@@ -117,8 +117,26 @@ services:
     tty: true
     networks:
       - lingodb
+    volumes: 
+      - ./perf_export:/perf_export
     environment:
       DLS: DRIVER=ArrowDriver;HOST=sqlfliteDuckdb;PORT=31337;useEncryption=false;UID=sqlflite_username;PWD=sqlflite_password
+      TYPE: "0"
+  odbc_sqlflite_sqlite:
+    image: cpp_odbc_client
+    build:
+      context: ./cpp_odbc
+      dockerfile: Dockerfile
+    container_name: odbc_sqlflite_sqlite
+    privileged: true
+    stdin_open: true
+    tty: true
+    networks:
+      - lingodb
+    volumes: 
+      - ./perf_export:/perf_export
+    environment:
+      DLS: DRIVER=ArrowDriver;HOST=sqlfliteSqlite;PORT=31337;useEncryption=false;UID=sqlflite_username;PWD=sqlflite_password
       TYPE: "0"
   odbc_duckdb:
     image: cpp_odbc_client
@@ -133,6 +151,8 @@ services:
       - lingodb
     volumes: 
       - /home/mor/tpch:/database
+      - ./valgrind_export:/valgrind_export
+      - ./perf_export:/perf_export
     environment:
       DLS: DRIVER={DuckDB Driver};DATABASE=/database/tpch_sf20.duckdb
       TYPE: "0"
@@ -148,8 +168,12 @@ services:
     tty: true
     networks:
       - lingodb
+    volumes: 
+      - /home/mor/tpch:/database
+      - ./valgrind_export:/valgrind_export
+      - ./perf_export:/perf_export
     environment:
-      DLS: "SQLITEODBC"
+      DLS: "DRIVER={SQLite3};DATABASE=/database/TPC-H-20.db;Timeout=2000"
       TYPE: "0"
   #simple_jdbc_timing_client:
    # image: simple_jdbc_timing_client
@@ -230,6 +254,21 @@ services:
       context: ./java_adbc
       dockerfile: Dockerfile
     container_name: adbc_timing_client_sqlflite
+    privileged: true
+    stdin_open: true
+    tty: true
+    networks:
+      - lingodb
+    environment:
+      JDBC_URL: jdbc:arrow-flight-sql://simpleSQLServer:8083?useEncryption=false
+
+
+  cpp_adbc:
+    image: cpp_adbc
+    build:
+      context: ./cpp_adbc
+      dockerfile: Dockerfile
+    container_name: cpp_adbc
     privileged: true
     stdin_open: true
     tty: true

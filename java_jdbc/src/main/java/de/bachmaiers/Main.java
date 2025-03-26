@@ -71,8 +71,10 @@ public class Main {
             long start = System.nanoTime();
             PreparedStatement ps = conn.prepareStatement(type);
             ResultSet rs = ps.executeQuery();
+
             while (rs.next()) {
-                size++;
+
+                System.out.println(rs.getInt(1));
             }
             rs.close();
             ps.close();

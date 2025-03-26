@@ -94,6 +94,11 @@ int main(int argc, char* argv[]) {
         odbc::EnvironmentRef env = odbc::Environment::create();
 
         odbc::ConnectionRef conn = env->createConnection();
+        if (argv[1] == nullptr) {
+            return 1;
+        }
+        std::cout << "Connecting to " << argv[1] << std::endl;
+
         conn->connect(argv[1]);
         std::array<SQLQuery, 8> queries{SQLQuery::query1, SQLQuery::query2, SQLQuery::query3, SQLQuery::query4, SQLQuery::query5, SQLQuery::query6, SQLQuery::query7, SQLQuery::query8};
         for (auto query : queries)
