@@ -30,3 +30,7 @@ logs/*
 *.exe
 *.out
 *.app
+
+cpp_adbc/cmake-build*
+cpp_adbc/.idea*
+cpp_odbc/.idea*
